@@ -6,6 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        Poppins: ["Poppins", "sans-serif"],
+        PlusJakartaSans: ["Plus Jakarta Sans", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
         metropolis: ["Metropolis", "sans-serif"],
         Pristina: ["Pristina", "sans-serif"],
