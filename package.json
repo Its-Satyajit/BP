@@ -1,0 +1,36 @@
+{
+  "devDependencies": {
+    "@ryangjchandler/alpine-tooltip": "^1.2.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.15",
+    "concurrently": "^8.2.1",
+    "daisyui": "^3.6.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.13.6",
+    "postcss": "^8.4.29",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "scripts": {
+    "cli:css": "tailwindcss -i ./input/input.css -o ./src/assets/css/bundle.css  --watch",
+    "cli:css-minify": "tailwindcss -i ./input/input.css -o ./src/assets/css/bundle.css --minify --watch",
+    "alpine": "npx esbuild ./src/index.js --outfile=./dist/bundle.js --bundle --minify",
+    "cssbuild": "tailwindcss -o ./dist/output.css --minify",
+    "minify": "gulp minify",
+    "watch": "gulp watch",
+    "cli:js": "gulp",
+    "dev": "concurrently \"pnpm:cli:css \" \"pnpm:cli:js \""
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.0",
+    "esbuild": "^0.19.2"
+  }
+}
